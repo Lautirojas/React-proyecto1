@@ -1,10 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import buzo from "../../multimedia/buzo.jpeg"
+
 const ItemList = () => {
         // varaible--funcion que 
         //         --cambia el estado-default value
     const [producto, setProducto] = useState([]);
-    console.log(buzo)
     useEffect(() => {
         async function fetchProduct() {
             let resolve = await fetch("./json/productos.json")
@@ -12,7 +11,7 @@ const ItemList = () => {
             console.log(data)
             const cards = data.map(producto =>{
                 let carlos = <div className="card" key={producto.id}>
-                                        <img src={buzo} alt={producto.nombre}/>
+                                        <img src={"../../multimedia/" + producto.img} alt={producto.nombre}/>
                                     <div className='card-description'>
                                             <span className='card-clothes'>{producto.tipo}</span>
                                             <h2 className='card-name'>{producto.nombre}</h2>
