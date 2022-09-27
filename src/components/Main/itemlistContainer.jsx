@@ -1,8 +1,6 @@
 import React from 'react';
 
-const ItemListContainer = () => {
-    
-    
+const ItemlistContainer = () => {
     return (
         <div>
             
@@ -10,4 +8,4 @@ const ItemListContainer = () => {
     );
 }
 
-export default ItemListContainer;
+export default ItemlistContainer;
