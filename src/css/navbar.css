@@ -1,0 +1,36 @@
+.header-main{
+    display: flex;
+    align-items: center;
+    max-width: 1302px;
+    margin: auto;
+}
+
+/* logo */
+.logo{
+    width: 23.332%;
+}
+/* li */
+.li-nav{
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 17px;
+}
+.li-nav:hover{
+    color: #86008F;
+}
+/* ul container */
+.ul-container{
+    width: 61.931%;
+}
+/* icon carrito */
+.iconcarrito-container{
+    width: 14.401%;
+}
+
+.iconcarrito{
+    cursor: pointer;
+    font-size: 38px;
+}
+.iconcarrito:hover{
+    color: #86008F;
+}

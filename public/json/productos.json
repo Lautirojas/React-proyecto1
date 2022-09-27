@@ -1,0 +1,12 @@
+[
+    {"id": 1, "nombre": "BUZO NARANJA", "tipo": "buzo", "stock": 20,  "precio":2200,  "img": "buzo.jpeg"},
+    {"id": 2, "nombre": "BUZO ROSA", "tipo": "buzo", "stock": 22,  "precio": 3100,  "img": "buzo1.jpeg"},
+    {"id": 3, "nombre": "BUZO NEGRO", "tipo": "buzo", "stock": 30,  "precio": 2500,  "img": "buzo2.jpeg"},
+    {"id": 4, "nombre": "BUZO NEGRO CON ROSITA", "tipo": "buzo", "stock": 15,  "precio": 2400,  "img": "buzo3.jpeg"},
+    {"id": 5, "nombre": "BUZO BEIGE", "tipo": "buzo", "stock": 23,  "precio": 4000,  "img": "buzo4.jpeg"},
+    {"id": 6, "nombre": "BUZO NARANJA", "tipo": "buzo", "stock": 27,  "precio": 2000,  "img": "buzo5.jpeg"},
+    {"id": 7, "nombre": "BUZO NARANJA", "tipo": "buzo", "stock": 28,  "precio": 3500,  "img": "buzo6.jpeg"},
+    {"id": 8, "nombre": "BUZO NARANJA", "tipo": "buzo", "stock": 20,  "precio":2200, "img": "buzo.jpeg"},
+    {"id": 9, "nombre": "BUZO NARANJA", "tipo": "buzo", "stock": 20,  "precio": 2200, "img": "buzo.jpeg"},
+    {"id": 10, "nombre": "BUZO NARANJA", "tipo": "buzo", "stock": 20,  "precio": 2200,  "img": "buzo.jpeg"}
+]
