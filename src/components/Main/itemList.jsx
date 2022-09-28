@@ -15,7 +15,7 @@ const ItemList = () => {
                                     <div className='card-description'>
                                             <span className='card-clothes'>{producto.tipo}</span>
                                             <h2 className='card-name'>{producto.nombre}</h2>
-                                            <h2 className='card-price'>{producto.precio}</h2>
+                                            <h2 className='card-price'>${producto.precio}</h2>
                                             <span className='card-product'>Ver Productos</span>
                                     </div>
                             </div>

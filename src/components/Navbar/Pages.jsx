@@ -1,7 +1,7 @@
 import React from 'react';
 import "../../css/navbar.css";
 import "../../css/reiniciosgenerales.css";
-import logo from "../../multimedia/notfancylogo.png";
+import logo from "../notfancylogo.png";
 import Carrito from './Carrito';
 
 const Pages = () => {
