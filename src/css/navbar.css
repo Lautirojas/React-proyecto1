@@ -15,6 +15,15 @@
     padding: 10px 20px;
     font-size: 17px;
 }
+
+.li-nav a{
+    color: #000;
+}
+
+.li-nav a:hover{
+    color: #86008F;
+}
+
 .li-nav:hover{
     color: #86008F;
 }
@@ -28,6 +37,7 @@
 }
 
 .iconcarrito{
+    color: #000;
     cursor: pointer;
     font-size: 38px;
 }
