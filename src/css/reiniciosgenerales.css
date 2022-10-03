@@ -14,7 +14,7 @@ a:link{
 }
 
 body{
-    background-color: #ffffff;
+    background-color: #ededed;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

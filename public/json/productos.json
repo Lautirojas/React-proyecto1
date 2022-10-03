@@ -1,5 +1,5 @@
 [
-    {"id": 1, "nombre": "BUZO NARANJA", "tipo": "Buzo", "stock": 20,  "precio":2200,  "img": "buzo.jpeg"},
+    {"id": 1, "nombre": "BUZO NARANJA", "tipo": "Buzo", "stock": 20,  "precio":2200,  "img": "buzo.jpeg", "img1": "buzo-2.jpeg", "img2": "buzo-3.jpeg"},
     {"id": 2, "nombre": "BUZO ROSA", "tipo": "Buzo", "stock": 22,  "precio": 3100,  "img": "buzo1.jpeg"},
     {"id": 3, "nombre": "BUZO NEGRO", "tipo": "Buzo", "stock": 30,  "precio": 2500,  "img": "buzo2.jpeg"},
     {"id": 4, "nombre": "BUZO NEGRO CON ROSITA", "tipo": "Buzo", "stock": 15,  "precio": 2400,  "img": "buzo3.jpeg"},
