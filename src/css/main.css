@@ -38,12 +38,14 @@
 }
 
 .card-name{
+    color: #2d2d33;
     font-size: 20px;
     font-weight: bold;
     padding-top: 5px;
 }
 
 .card-price{
+    color: #2d2d33;
     font-size: 15px;
     font-weight: 600;
     padding-top: 8px;
@@ -56,6 +58,10 @@
     color: #ffffff;
     background-color: #86008F;
     padding: 10px;
+}
+
+.card-product a{
+    color: #fff;
 }
 
 /* slides */

@@ -1,14 +1,11 @@
 import React from 'react';
-import "../../css/main.css";
 
-const Main = () => {
+const Home = () => {
     return (
         <div>
-            <>
-                <h1>HOME</h1>
-            </>
+            <h1>HOME</h1>
         </div>
     );
 }
 
-export default Main;
+export default Home;

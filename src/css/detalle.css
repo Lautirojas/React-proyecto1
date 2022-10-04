@@ -137,7 +137,7 @@
 .buy-button{
     color: #fff;
     padding: 10px;
-    background-color: aqua;
+    background-color: #86008F;
     border: 1px solid #86008F;
     border-radius: 2px;
     margin-top: 5px;
@@ -235,14 +235,14 @@
     overflow: hidden;
     position: relative;
     display: inline-flex;
-    border: 1px solid #86008F;
+    border: 0px solid #86008F;
     border-radius: 4px;
 }
 
 .box-image{
     height: 48px;
     width: 48px;
-    padding: 3px;
+    padding: 0px;
 }
 
 .image{

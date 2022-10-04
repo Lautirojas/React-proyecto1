@@ -1,16 +1,19 @@
-import React,{useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React,{useEffect,useState} from 'react';
+import { useParams, Link} from 'react-router-dom';
 import { consultarBDD } from '../../utils/FuncionesUtiles';
-const ItemList = () => {
-        // variable--funcion que 
-        //         --cambia el estado-default value
+
+const Categoria = () => {
+
     const [producto, setProducto] = useState([]);
+    const {id} = useParams()
     useEffect(() => {
-        consultarBDD("../json/productos.json").then(productos =>{
-            const cards = productos.map(producto =>{
+        consultarBDD("../json/productos.json").then(producto =>{
+        const productoscategoria = producto.filter(productos => productos.categoria === id)
+        console.log(productoscategoria)
+            const cards = productoscategoria.map(producto =>{
                 let carlos = <div className="card" key={producto.id}>
                                 <Link to={`/productos/${producto.id}`} >
-                                            <img src={"./multimedia/" + producto.img} alt={producto.nombre}/>
+                                            <img src={"../multimedia/" + producto.img} alt={producto.nombre}/>
                                         <div className='card-description'>
                                                 <span className='card-clothes'>{producto.categoria}</span>
                                                 <h2 className='card-name'>{producto.nombre}</h2>
@@ -23,7 +26,8 @@ const ItemList = () => {
             })
             setProducto(cards)
         })
-    }, []);
+    }, [id]);
+
     return (
         <>
             <section className='cards-container'>
@@ -36,6 +40,4 @@ const ItemList = () => {
     );
 }
 
-export default ItemList;
-
-
+export default Categoria;
