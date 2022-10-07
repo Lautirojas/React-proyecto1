@@ -135,6 +135,7 @@
 }
 
 .buy-button{
+    cursor: pointer;
     color: #fff;
     padding: 10px;
     background-color: #86008F;

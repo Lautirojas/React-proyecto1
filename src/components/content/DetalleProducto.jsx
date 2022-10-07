@@ -1,7 +1,31 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "../../css/detalle.css"
 
 const DetalleProducto = ({producto}) => {
+    const [cantidad, setcantidad] = useState(1);
+    const carrito = []
+    const agregarAlCarrito = (prod, cant) => {
+        let indice = carrito.findIndex(producto => producto.id === prod.id)
+        
+        if(indice !== -1){
+            carrito[indice].cantidad = cant
+        } else{
+            const prodCarrito = {id: prod.id, cantidad: cant};
+            carrito.push(prodCarrito)
+        }console.log(carrito)
+    }   
+
+    const cantProducto = (operacion) => {
+        if(operacion === "+") {
+            if(cantidad < producto.stock){
+                setcantidad(cantidad + 1)
+            }
+        }else if(cantidad > 1){
+            setcantidad(cantidad - 1)
+        }
+    }
+
+
     return (
 
         <div className='detalleproducto'>
@@ -48,7 +72,7 @@ const DetalleProducto = ({producto}) => {
                                                         Envios a todo el pais
                                                     </p>
                                                     <div className='advices'>
-                                                        <a href="">Ver más formas de entrega</a>
+                                                        <div>Ver más formas de entrega</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,7 +90,7 @@ const DetalleProducto = ({producto}) => {
                                                         <p className='advice-devolucion'>30 dias de garantia desde que lo recibís</p>
                                                     </div>
                                                     <div className='advices'>
-                                                        <a href="">Conocer Más</a>
+                                                        <div>Conocer Más</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,21 +99,15 @@ const DetalleProducto = ({producto}) => {
                                             <p>Stock disponible: {producto.stock}</p>
                                         </div>
                                         <div className="product__sumaresta">
-                                            <form>
-                                                <button className="product__buttons"><span className="material-symbols-outlined">add</span></button>
-                                            </form>
-                                            <input type="tel" autoComplete="off" disabled className="product__input" defaultValue="1" />
-                                            <form>
-                                                <button type="button" className="product__buttons"><span className="material-symbols-outlined">remove</span></button>
-                                            </form>
+                                            <button className="product__buttons" onClick={() => cantProducto("+")}><span className="material-symbols-outlined">add</span></button>
+                                            <input type="tel" autoComplete="off" disabled className="product__input" value={cantidad}/>
+                                            <button type="button" className="product__buttons"  onClick={() => cantProducto("-")}><span className="material-symbols-outlined">remove</span></button>
                                         </div>
                                         <div className='d-flex d-column'>
-                                            <form action="">
-                                                <div className='d-flex d-column justify-center buy-buttons'>
+                                            <div className='d-flex d-column justify-center buy-buttons'>
                                                     <button type='submit' className='buy-button'><span>Comprar ahora</span></button>
-                                                    <button type='submit' className='buy-button'><span>Agregar al Carrito</span></button>
-                                                </div>
-                                            </form>
+                                                    <button type='submit' className='buy-button'  onClick={() => agregarAlCarrito(producto, cantidad)}><span>Agregar al Carrito</span></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

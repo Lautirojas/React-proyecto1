@@ -18,7 +18,7 @@ const Pages = () => {
                     <ul className='d-flex justify-center'>
                         <li className='li-nav'><Link to="/Categoria/Buzos">BUZOS</Link></li>
                         <li className='li-nav'><Link to="/Categoria/Remeras">REMERAS</Link></li>
-                        <li className='li-nav'><Link to="/Categoria/Jeans">JEANS</Link></li>
+                        <li className='li-nav'><Link to="/Categoria/Pantalones">PANTALONES</Link></li>
                         <li className='li-nav'><Link to="/Categoria/Accesorios">ACCESORIOS</Link></li>
                         <li className='li-nav'><Link to="/Categoria/Camisas">CAMISAS</Link></li>
                         <li className='li-nav'><Link to="/Categoria/Shorts">SHORTS</Link></li>
