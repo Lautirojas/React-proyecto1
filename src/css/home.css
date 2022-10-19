@@ -1,0 +1,67 @@
+/* slides */
+
+.testimonio {
+  height: 60vh;
+}
+
+.slidecontent {
+  font-size: 45px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.btn-container {
+  text-align: center;
+  position: absolute;
+  top: 360px;
+  bottom: 0;
+  right: 0;
+  left: 0px;
+}
+
+.btn-light {
+  cursor: pointer;
+  border-radius: 2px;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  font-size: 30px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.slides {
+  background-image: url(../multimedia/imagenslider.jpeg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.slides1 {
+  background-image: url(../multimedia/imagenslider1.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.slides2 {
+  background-image: url(../multimedia/imagenslider2.jpeg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+}

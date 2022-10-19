@@ -106,7 +106,7 @@
 }
 
 .slides{
-    background-image: url(../../public/multimedia/imagenslider.jpeg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fimagenslider.jpeg?alt=media&token=e7923cdb-3672-4232-93c1-172c638fc392);
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@
 }
 
 .slides1{
-    background-image: url(../../public/multimedia/imagenslider1.jpg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fimagenslider1.jpg?alt=media&token=8a3dfa26-0fdd-469e-9f60-a22def039146);
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -124,7 +124,7 @@
 }
 
 .slides2{
-    background-image: url(../../public/multimedia/imagenslider2.jpeg);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fimagenslider2.jpeg?alt=media&token=ccb00758-7ac0-464a-bd65-c5950b70096b);
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;

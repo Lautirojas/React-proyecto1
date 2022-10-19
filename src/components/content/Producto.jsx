@@ -1,24 +1,23 @@
-import React, {useState,useEffect} from 'react';
-import { useParams } from 'react-router-dom';
-import { consultarBDD } from '../../utils/FuncionesUtiles';
-import DetalleProducto from './DetalleProducto';
-// "../json/productos.json"
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { getProductById } from "../../utils/Firebase";
+import DetalleProducto from "./DetalleProducto";
 const Producto = () => {
+  const [producto, setProducto] = useState([]);
+  const { id } = useParams();
+  useEffect(() => {
+    getProductById(id).then((prod) => {
+      setProducto(prod);
+    });
+  }, [id]);
 
-    const [producto, setproducto] = useState([]);
-    const {id} = useParams()
-    useEffect(() => {
-        consultarBDD("../json/productos.json").then(productos =>{
-            const producto1 = productos.find(productoarray => productoarray.id === parseInt(id))
-            setproducto(producto1)
-        })
-    }, [id]);
-    
+  if (producto.length !== 0) {
     return (
-        <div>
-            <DetalleProducto producto={producto}/>
-        </div>
+      <>
+        <DetalleProducto producto={producto} />
+      </>
     );
-}
+  }
+};
 
 export default Producto;

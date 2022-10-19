@@ -6,8 +6,18 @@
 }
 
 /* logo */
+.img-nav:hover{
+    transition: 1s;
+    box-shadow: 0px 0px 66px 29px rgba(134,0,143,0.74) ;
+}
+
 .logo{
     width: 23.332%;
+}
+
+.logo:hover{
+    transition: 900ms;
+    box-shadow: 0px 0px 66px 29px rgba(134,0,143,0.74) inset;
 }
 /* li */
 .li-nav{
@@ -16,15 +26,11 @@
     font-size: 17px;
 }
 
-.li-nav a{
+.hover-linav{
     color: #000;
 }
 
-.li-nav a:hover{
-    color: #86008F;
-}
-
-.li-nav:hover{
+.hover-linav:hover{
     color: #86008F;
 }
 /* ul container */
