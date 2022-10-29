@@ -32,7 +32,6 @@ const Producto = () => {
   useEffect(() => {
     getProductById(id).then((prod) => {
       setProducto(prod);
-      console.log(prod);
     });
   }, [id]);
 

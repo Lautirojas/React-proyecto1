@@ -28,10 +28,18 @@ button {
   line-height: normal !important;
 }
 
+.input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .main {
   background-color: #f0ffff;
   min-height: 75vh;
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .navbar {

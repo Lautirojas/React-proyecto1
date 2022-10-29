@@ -27,16 +27,18 @@
 }
 
 .product-in-cart {
+  background-color: rgb(0 0 0 / 90%);
   padding: 15px;
 }
 
 .container-pricetotal {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  background-color: rgb(0 0 0 / 90%);
 }
 
 .hr-cart {
-  width: 98%;
+  width: 97.7%;
   opacity: 80%;
   margin: 0 auto;
   color: #fff;
@@ -90,7 +92,6 @@
 /* IN CART */
 .product-carrito {
   border-bottom: 1px solid #fff;
-  background-color: #c7c7c7;
   display: flex;
   padding: 15px;
   text-decoration: none;
@@ -108,7 +109,7 @@
 
 .product__title_carrito {
   display: flex;
-  color: #000;
+  color: #fff;
   font-size: 18px;
   font-weight: 400;
   margin: 0;
@@ -117,7 +118,7 @@
 .main__price__carrito {
   display: flex;
   margin: 15px 0;
-  color: #000;
+  color: #fff;
   font-size: 20px;
   font-weight: 400;
   align-items: center;
@@ -125,7 +126,7 @@
 }
 
 .price__promo__carrito {
-  color: rgb(0 0 0 / 60%);
+  color: #a2a2a2;
   text-decoration: line-through;
   padding: 0 10px;
 }
@@ -169,7 +170,7 @@
 
 .boton-eliminar {
   cursor: pointer;
-  background-color: #c7c7c7;
+  background-color: rgb(0 0 0 / 10%);
   color: #86008f;
   border: none;
   font-size: 20px;

@@ -22,7 +22,6 @@ const CarritoProvider = (props) => {
       aux.push(prodCarrito);
     }
     setCarrito(structuredClone(aux));
-    console.log(carrito);
   };
 
   const borrarProducto = (prod) => {
@@ -30,7 +29,6 @@ const CarritoProvider = (props) => {
     let indice = aux.findIndex((producto) => producto.id === prod.id);
     aux.splice(indice, 1);
     setCarrito(structuredClone(aux));
-    console.log(carrito);
   };
 
   const vaciarCarrito = () => {
@@ -42,14 +40,8 @@ const CarritoProvider = (props) => {
     carrito.map((productomap) => {
       const prodId = productomap.id;
       return getProductById(prodId).then((prod) => {
-        prod[1].stock -= productomap.cantidad;
-        if (
-          prod[1].stock <= 0 ||
-          (prod[1].stock -= productomap.cantidad === 0)
-        ) {
-          prod[1].stock = 0;
-        } else {
-          prod[1].stock += productomap.stock;
+        if (prod[1].stock >= 1) {
+          prod[1].stock -= productomap.cantidad;
         }
         updateProducto(prodId, prod[1]);
       });

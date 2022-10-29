@@ -87,75 +87,76 @@ const Form = () => {
 
   return (
     <div className="main">
-      <form onSubmit={consultarForm} ref={datosForm}>
-        <div>
-          <label htmlFor="nombre" className="">
-            Nombre
-          </label>
+      <form onSubmit={consultarForm} ref={datosForm} className="boxform">
+        <h2>Verificar Compra</h2>
+        <div className="inputbox">
+          <label htmlFor="nombre" className=""></label>
           <input
             type="text"
+            required
             className=""
             name="nombre"
             onChange={handleChange}
             onBlur={handleBlur}
             value={form.name}
           />
+          <span>Nombre</span>
           {error.nombre && <p>{error.nombre}</p>}
         </div>
-        <div>
-          <label htmlFor="surname" className="">
-            Apellido
-          </label>
+        <div className="inputbox">
+          <label htmlFor="surname" className=""></label>
           <input
             type="text"
             className=""
+            required
             name="surname"
             onChange={handleChange}
             onBlur={handleBlur}
             value={form.surname}
           />
+          <span>Apellido</span>
           {error.surname && <p>{error.surname}</p>}
         </div>
-        <div>
-          <label htmlFor="email" className="">
-            Email
-          </label>
+        <div className="inputbox">
+          <label htmlFor="email" className=""></label>
           <input
             type="email"
             className=""
+            required
             name="email"
             onChange={handleChange}
             onBlur={handleBlur}
             value={form.email}
           />
+          <span>Email</span>
           {error.email && <p>{error.email}</p>}
         </div>
-        <div>
-          <label htmlFor="dni" className="">
-            Dni
-          </label>
+        <div className="inputbox">
+          <label htmlFor="dni" className=""></label>
           <input
             type="text"
+            required
             className=""
             name="dni"
             onChange={handleChange}
             onBlur={handleBlur}
             value={form.dni}
           />
+          <span>Dni</span>
           {error.dni && <p>{error.dni}</p>}
         </div>
-        <div>
-          <label htmlFor="address" className="">
-            Direccion
-          </label>
+        <div className="inputbox">
+          <label htmlFor="address" className=""></label>
           <input
             type="text"
             className=""
+            required
             name="address"
             onChange={handleChange}
             onBlur={handleBlur}
             value={form.address}
           />
+          <span>Direccion</span>
           {error.address && <p>{error.address}</p>}
         </div>
         <div>

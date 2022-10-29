@@ -11,7 +11,6 @@ const Categoria = () => {
       const productoscategoria = producto.filter(
         (productos) => productos[1].categoria === id
       );
-      console.log(productoscategoria);
       const categorys = () => {
         const cat = productoscategoria.find(
           (producto) => producto[1].categoria

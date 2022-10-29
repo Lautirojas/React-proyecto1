@@ -1,0 +1,75 @@
+.boxform {
+  width: 400px;
+  margin: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 0px 15px 2px;
+}
+
+.boxform h2 {
+  margin-bottom: 25px;
+}
+
+.boxform div button {
+  margin-top: 15px;
+}
+
+.inputbox {
+  position: relative;
+  width: 250px;
+  margin: 10px;
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #868686;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: gray;
+  transition: 0.5s;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+  color: #86008f;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background-color: #fff;
+  border-left: 1px solid #86008f;
+  border-right: 1px solid #86008f;
+  letter-spacing: 0.2em;
+}
+
+.inputbox input:valid,
+.inputbox input:focus {
+  border: 1px solid #86008f;
+}
+
+.inputbox:nth-child(-n + 6) input:valid ~ span,
+.inputbox:nth-child(-n + 6) input:focus ~ span {
+  background-color: #86008f;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.inputbox p {
+  padding: 5px;
+  font-size: 0.9em;
+  color: rgb(179 0 52);
+}
