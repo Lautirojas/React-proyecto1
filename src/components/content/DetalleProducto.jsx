@@ -1,19 +1,19 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
+import Contador from "../layouts/contador";
 import "../../css/detalle.css";
 
-const DetalleProducto = ({ producto }) => {
-  const [cantidad, setcantidad] = useState(1);
+const DetalleProducto = ({
+  producto,
+  handleLabel,
+  handlestar,
+  label,
+  starActive,
+  cantProducto,
+  cantidad,
+}) => {
+  // CARRITO CONTEXT
   const { agregarProducto } = useContext(CarritoContext);
-  const cantProducto = (operacion) => {
-    if (operacion === "+") {
-      if (cantidad < producto[1].stock) {
-        setcantidad(cantidad + 1);
-      }
-    } else if (cantidad > 1) {
-      setcantidad(cantidad - 1);
-    }
-  };
 
   return (
     <div className="main">
@@ -31,20 +31,45 @@ const DetalleProducto = ({ producto }) => {
                       <div className="meta-title">
                         <h1 className="title">{producto[1].nombre}</h1>
                       </div>
-                      <div className="review">
-                        <span className="material-symbols-outlined icon">
+                      <div className="review star-selected">
+                        <span
+                          className={`${
+                            starActive >= 1 ? "star-selected" : null
+                          } material-symbols-outlined icon`}
+                          onClick={() => handlestar(1)}
+                        >
                           grade
                         </span>
-                        <span className="material-symbols-outlined icon">
+                        <span
+                          className={`${
+                            starActive >= 2 ? "star-selected" : null
+                          } material-symbols-outlined icon`}
+                          onClick={() => handlestar(2)}
+                        >
                           grade
                         </span>
-                        <span className="material-symbols-outlined icon">
+                        <span
+                          className={`${
+                            starActive >= 3 ? "star-selected" : null
+                          } material-symbols-outlined icon`}
+                          onClick={() => handlestar(3)}
+                        >
                           grade
                         </span>
-                        <span className="material-symbols-outlined icon">
+                        <span
+                          className={`${
+                            starActive >= 4 ? "star-selected" : null
+                          } material-symbols-outlined icon`}
+                          onClick={() => handlestar(4)}
+                        >
                           grade
                         </span>
-                        <span className="material-symbols-outlined icon">
+                        <span
+                          className={`${
+                            starActive === 5 ? "star-selected" : null
+                          } material-symbols-outlined icon`}
+                          onClick={() => handlestar(5)}
+                        >
                           grade
                         </span>
                       </div>
@@ -94,47 +119,21 @@ const DetalleProducto = ({ producto }) => {
                           </div>
                         </div>
                       </div>
-                      <div className="d-flex stock-available">
-                        <p>Stock disponible: {producto[1].stock}</p>
+                      <div className="d-flex justify-center stock-available">
+                        <p>
+                          {producto[1].stock === 0
+                            ? "Producto Sin Stock"
+                            : `Stock diponible : ${producto[1].stock}`}
+                        </p>
                       </div>
-                      <div className="product__sumaresta">
-                        <button
-                          className="product__buttons"
-                          onClick={() => cantProducto("+")}
-                        >
-                          <span className="material-symbols-outlined">add</span>
-                        </button>
-                        <input
-                          type="tel"
-                          autoComplete="off"
-                          disabled
-                          className="product__input"
-                          value={cantidad}
+                      {producto[1].stock === 0 ? null : (
+                        <Contador
+                          cantProducto={cantProducto}
+                          cantidad={cantidad}
+                          agregarProducto={agregarProducto}
+                          producto={producto}
                         />
-                        <button
-                          type="button"
-                          className="product__buttons"
-                          onClick={() => cantProducto("-")}
-                        >
-                          <span className="material-symbols-outlined">
-                            remove
-                          </span>
-                        </button>
-                      </div>
-                      <div className="d-flex d-column">
-                        <div className="d-flex d-column justify-center buy-buttons">
-                          <button type="submit" className="buy-button">
-                            <span>Comprar ahora</span>
-                          </button>
-                          <button
-                            type="submit"
-                            className="buy-button"
-                            onClick={() => agregarProducto(producto, cantidad)}
-                          >
-                            <span>Agregar al Carrito</span>
-                          </button>
-                        </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -257,6 +256,7 @@ const DetalleProducto = ({ producto }) => {
               <div className="product-image-container">
                 <div className="gallery-images">
                   <div className="column-images">
+                    {/* 1 */}
                     <div className="c-image">
                       <label htmlFor="" className="c-image-label">
                         <div className="c-image-box">
@@ -265,6 +265,7 @@ const DetalleProducto = ({ producto }) => {
                               src={`${producto[1].img}`}
                               alt={producto[1].nombre}
                               className="image"
+                              onClick={() => handleLabel(1)}
                             />
                           </div>
                         </div>
@@ -273,10 +274,13 @@ const DetalleProducto = ({ producto }) => {
                         <img
                           src={`${producto[1].img}`}
                           alt={producto[1].nombre}
-                          className="figure-image"
+                          className={`${
+                            label > 1 ? "d-none" : "d-flex"
+                          } figure-image`}
                         />
                       </figure>
                     </div>
+                    {/* 2 */}
                     <div className="c-image">
                       <label htmlFor="" className="c-image-label">
                         <div className="c-image-box">
@@ -285,18 +289,22 @@ const DetalleProducto = ({ producto }) => {
                               src={`${producto[1].img1}`}
                               alt={producto[1].nombre}
                               className="image"
+                              onClick={() => handleLabel(2)}
                             />
                           </div>
                         </div>
                       </label>
                       <figure className="c-image-figure">
                         <img
-                          src={`${producto[1].img}`}
+                          src={`${producto[1].img1}`}
                           alt={producto[1].nombre}
-                          className="figure-image"
+                          className={`${
+                            label === 1 || label > 2 ? "d-none" : "d-flex"
+                          } figure-image`}
                         />
                       </figure>
                     </div>
+                    {/* 3 */}
                     <div className="c-image">
                       <label htmlFor="" className="c-image-label">
                         <div className="c-image-box">
@@ -305,15 +313,18 @@ const DetalleProducto = ({ producto }) => {
                               src={`${producto[1].img2}`}
                               alt={producto[1].nombre}
                               className="image"
+                              onClick={() => handleLabel(3)}
                             />
                           </div>
                         </div>
                       </label>
                       <figure className="c-image-figure">
                         <img
-                          src={`${producto[1].img}`}
+                          src={`${producto[1].img2}`}
                           alt={producto[1].nombre}
-                          className="figure-image"
+                          className={`${
+                            label < 3 ? "d-none" : "d-flex"
+                          } figure-image`}
                         />
                       </figure>
                     </div>

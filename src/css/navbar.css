@@ -1,52 +1,63 @@
-.header-main{
-    display: flex;
-    align-items: center;
-    max-width: 1302px;
-    margin: auto;
+.header-main {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  max-width: 1302px;
+  margin: auto;
 }
 
 /* logo */
-.img-nav:hover{
-    transition: 1s;
-    box-shadow: 0px 0px 66px 29px rgba(134,0,143,0.74) ;
+
+.logo {
+  width: 23.332%;
 }
 
-.logo{
-    width: 23.332%;
-}
-
-.logo:hover{
-    transition: 900ms;
-    box-shadow: 0px 0px 66px 29px rgba(134,0,143,0.74) inset;
-}
 /* li */
-.li-nav{
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 17px;
+.li-nav {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 17px;
 }
 
-.hover-linav{
-    color: #000;
+.hover-linav {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
 }
 
-.hover-linav:hover{
-    color: #86008F;
+.hover-linav:hover {
+  color: #86008f;
 }
 /* ul container */
-.ul-container{
-    width: 61.931%;
+.ul-container {
+  width: 61.931%;
 }
 /* icon carrito */
-.iconcarrito-container{
-    width: 14.401%;
+.iconcarrito-container {
+  width: 14.401%;
 }
 
-.iconcarrito{
-    color: #000;
-    cursor: pointer;
-    font-size: 38px;
+.iconcarrito {
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  font-size: 38px;
 }
-.iconcarrito:hover{
-    color: #86008F;
+.iconcarrito:hover {
+  color: #86008f;
+}
+
+.iconcarrito::before {
+  content: attr(data-counter);
+  right: -0.3em;
+  top: -0.3em;
+  display: block;
+  position: absolute;
+  min-width: 1.6em;
+  height: 1.6em;
+  line-height: 1.5em;
+  border-radius: 100%;
+  color: #fff;
+  background-color: #86008f;
+  text-align: center;
+  font-size: 10px;
 }

@@ -24,12 +24,18 @@ body {
 }
 
 button {
+  border: 0;
   line-height: normal !important;
 }
 
 .main {
-  background-color: #eee;
+  background-color: #f0ffff;
   min-height: 75vh;
+  padding-top: 100px;
+}
+
+.navbar {
+  background-color: #000;
 }
 
 ul {
@@ -105,7 +111,6 @@ html {
   color: #86008f;
 }
 
-.darkmode {
-  background-color: #000;
-  color: #ffffff;
+.d-none {
+  display: none;
 }

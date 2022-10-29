@@ -20,6 +20,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+// eslint-disable-next-line
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
@@ -80,6 +81,17 @@ const createOrdenDeCompra = async (
 
 const getOrdenCompra = async (id) => {
   const ordenCompra = await getDoc(doc(db, "ordenCompra", id));
+  const orden = [ordenCompra.id, ordenCompra.data()];
+  return orden;
+};
+
+const getOrdenCompras = async () => {
+  const ordenesCompras = await getDocs(collection(db, "ordenCompra"));
+  const ordenes = ordenesCompras.docs.map((producto) => [
+    producto.id,
+    producto.data(),
+  ]);
+  return ordenes;
 };
 
 export {
@@ -88,4 +100,6 @@ export {
   getProductById,
   createOrdenDeCompra,
   getOrdenCompra,
+  getOrdenCompras,
+  updateProducto,
 };

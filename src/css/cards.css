@@ -1,133 +1,69 @@
-.cards-container{
-    padding: 40px;
+.cards-container {
+  padding: 40px;
 }
 
-.card-subtitle{
-    padding: 20px 0px;
+.cards-subtitle {
+  color: #86008f;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 
-.cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 1rem;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-.card{
-    background-color: #ffffff;
-    color: #2d2d33;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
+.card {
+  background-color: #fff;
+  color: #2d2d33;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
-.card img{
-    width: 100%;
-    height: auto;
+.card img {
+  width: 100%;
+  height: auto;
 }
 
-.card-figcaption{
-    padding: 1rem;
+.card-figcaption {
+  padding: 1rem;
 }
 
-.card-description{
-    margin: 10px 10px;
+.card-description {
+  margin: 10px 10px;
 }
 
-.card-clothes{
-    color: gray;
-    font-size: 11px;
+.card-clothes {
+  color: gray;
+  font-size: 11px;
 }
 
-.card-name{
-    color: #2d2d33;
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 5px;
+.card-name {
+  color: #2d2d33;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 5px;
 }
 
-.card-price{
-    color: #2d2d33;
-    font-size: 15px;
-    font-weight: 600;
-    padding-top: 8px;
-    padding-bottom: 15px;
+.card-price {
+  color: #2d2d33;
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 8px;
+  padding-bottom: 15px;
 }
 
-.card-product{
-    display: flex;
-    justify-content: center;
-    color: #ffffff;
-    background-color: #86008F;
-    padding: 10px;
+.card-product {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #86008f;
+  padding: 10px;
 }
 
-.card-product a{
-    color: #fff;
-}
-
-/* slides */
-
-.testimonio{
-    height: 60vh;
-}
-
-.slidecontent{
-    font-size: 45px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.btn-container{
-    text-align: center;
-    position: absolute;
-    top: 360px;
-    bottom: 0;
-    right: 0;
-    left: 0px;
-}
-
-.btn-light{
-    cursor: pointer;
-    border-radius: 2px;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 15px;
-    padding-left: 30px;
-    font-size: 30px;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-}
-
-.slides{
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fimagenslider.jpeg?alt=media&token=e7923cdb-3672-4232-93c1-172c638fc392);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-.slides1{
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fimagenslider1.jpg?alt=media&token=8a3dfa26-0fdd-469e-9f60-a22def039146);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    min-width: 100%;
-    min-height: 100%;
-}
-
-.slides2{
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fimagenslider2.jpeg?alt=media&token=ccb00758-7ac0-464a-bd65-c5950b70096b);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    min-width: 100%;
-    min-height: 100%;
+.card-product a {
+  color: #fff;
 }

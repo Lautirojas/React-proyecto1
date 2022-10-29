@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { getProducts } from "../../utils/Firebase";
 
 const Categoria = () => {
+  const [category, setcategory] = useState([]);
   const [Productos, setProducto] = useState([]);
   const { id } = useParams();
   useEffect(() => {
@@ -10,6 +11,14 @@ const Categoria = () => {
       const productoscategoria = producto.filter(
         (productos) => productos[1].categoria === id
       );
+      console.log(productoscategoria);
+      const categorys = () => {
+        const cat = productoscategoria.find(
+          (producto) => producto[1].categoria
+        );
+        setcategory(cat[1].categoria);
+      };
+      categorys();
       const cards = productoscategoria.map((producto) => {
         let carlos = (
           <div className="card" key={producto[0]}>
@@ -29,12 +38,11 @@ const Categoria = () => {
       setProducto(cards);
     });
   }, [id]);
-
   return (
     <>
       <div className="main">
         <section className="cards-container">
-          <h2 className="cards-subtitle">{}</h2>
+          <h2 className="cards-subtitle">{category}</h2>
           <article className="cards">{Productos}</article>
         </section>
       </div>

@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import SlideHome from "../layouts/slideHome";
 
 const Home = () => {
-    return (
-        <div className='main'>
-            <h1>HOME</h1>
-        </div>
-    );
-}
+  return (
+    <div className="main">
+      <SlideHome />
+    </div>
+  );
+};
 
 export default Home;

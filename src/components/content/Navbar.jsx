@@ -1,16 +1,14 @@
-import React from 'react';
-import Pages from "../layouts/Pages"
+import React from "react";
+import Pages from "../layouts/Pages";
 
+const Nav = () => {
+  return (
+    <>
+      <nav className="navbar">
+        <Pages />
+      </nav>
+    </>
+  );
+};
 
-
-const Nav = () =>{
-    return (
-        <>
-            <nav>
-                <Pages/>
-            </nav>
-        </>
-    );
-}
-
-export default Nav
+export default Nav;

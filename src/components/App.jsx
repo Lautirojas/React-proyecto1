@@ -13,6 +13,7 @@ import React from "react";
 import Nav from "./content/Navbar";
 import Home from "./content/Home";
 import Footer from "./content/Footer";
+import Form from "./content/Form";
 // LI NAV
 import Categoria from "./content/Categoria";
 import Carrito from "./content/Carrito";
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/Productos/:id" element={<Producto />} />
           <Route path="/Categoria/:id" element={<Categoria />} />
           <Route path="/Carrito" element={<Carrito />} />
+          <Route path="/Formulario" element={<Form />} />
           <Route
             path="*"
             element={

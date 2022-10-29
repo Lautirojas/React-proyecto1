@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { CarritoContext } from "../context/CarritoContext";
 import "../../css/cart.css";
 
 const Carrito = () => {
-  const { carrito, borrarProducto } = useContext(CarritoContext);
+  const { carrito, borrarProducto, totalPrice } = useContext(CarritoContext);
   const [carritoLocal, setCarritoLocal] = useState([]);
-  console.log(carrito);
   useEffect(() => {
     const prodMostrar = carrito.map((producto) => {
       let a = (
@@ -21,11 +21,7 @@ const Carrito = () => {
                 <span className="price__promo__carrito">$8.499</span>
               </div>
               <div className="cart__sumaresta">
-                <div>
-                  <button className="cart__buttons">
-                    <i className="fa-solid fa-minus" />
-                  </button>
-                </div>
+                <div></div>
                 <input
                   type="tel"
                   autoComplete="off"
@@ -33,11 +29,7 @@ const Carrito = () => {
                   className="cart__input"
                   defaultValue={`${producto.cantidad}`}
                 />
-                <div>
-                  <button type="button" className="cart__buttons">
-                    <i className="fa-solid fa-plus" />
-                  </button>
-                </div>
+                <div></div>
               </div>
               <div className="main__gitemcontainer1">
                 <div className="main__gitem1">
@@ -56,20 +48,55 @@ const Carrito = () => {
       );
       return a;
     });
+
     setCarritoLocal(prodMostrar);
   }, [carrito, borrarProducto]);
 
   if (carrito.length === 0) {
     return (
       <div className="main">
-        <h1>Carrito Vacio</h1>
+        <div className="carrito-container">
+          <div className="font-light cart-header">Carrito de compras</div>
+          <div className="carrito">
+            <div className="empty-product-in-cart">
+              <h5 className="emptycart-title">Tu Carrito esta vacio</h5>
+              <p className="emptycart-text">
+                ¿No sabés qué comprar? ¡Miles de productos te esperan!
+              </p>
+              <Link to="/">
+                <button className="emptycart-button">Seguir comprando</button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
     return (
-      <>
-        <div className="main">{carritoLocal}</div>
-      </>
+      <div className="main">
+        <div className="carrito-container">
+          <div className="cart-full">
+            <div className="font-light cart-header">Carrito de compras</div>
+            <div className="product-in-cart">{carritoLocal}</div>
+            <div className="container-pricetotal">
+              <div className="pricetotal">
+                <span className="total">
+                  Total sin envio
+                  <span className="price">${totalPrice}</span>
+                </span>
+              </div>
+              <hr className="hr-cart" />
+              <div className="cart-button-container">
+                <div>
+                  <Link to="/Formulario">
+                    <button className="emptycart-button">Seguir compra</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 };
