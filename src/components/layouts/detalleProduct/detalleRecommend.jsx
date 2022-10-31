@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Scrollbar, A11y } from "swiper";
+import { Pagination, Navigation, A11y } from "swiper";
 import { getProducts } from "../../../utils/Firebase";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import "../../../css/home.css";
 
 const DetalleRecommend = () => {
@@ -15,31 +14,29 @@ const DetalleRecommend = () => {
   useEffect(() => {
     getProducts().then((producto) => {
       const productoscategoria = producto.filter(
-        (productos) => productos[1].categoria === "Buzos"
+        (productos) => productos[0] === id
       );
-      console.log(productoscategoria);
-      const cards = productoscategoria.map((producto) => {
+
+      const cat = productoscategoria.find((cat) => cat[1].categoria);
+
+      const categorias = producto.filter(
+        (productoso) => productoso[1].categoria === cat[1].categoria
+      );
+      const cards = categorias.map((producto) => {
         let carlos = (
-          <Swiper
-            key={producto[0]}
-            className="mySwiper"
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            slidesPerView={3}
-            spaceBetween={30}
-            navigation={true}
-            scrollbar={{ hide: true }}
-            pagination={{ clickable: true }}
-          >
-            <SwiperSlide className="testimonio-recommended">
-              <div className="slide-recommended">
-                <Link to={`/productos/${producto[0]}`}>
-                  <div>
-                    <img src={producto[1].img} alt="" />
+          <SwiperSlide className="testimonio-recommended" key={producto[0]}>
+            <div className="slide-recommended">
+              <Link to={`/productos/${producto[0]}`}>
+                <div className="recommended-container">
+                  <img src={producto[1].img} alt="" />
+                  <div className="recommended-description">
+                    <h2 className="recommend-name">{producto[1].nombre}</h2>
+                    <h2 className="recommend-price">${producto[1].precio}</h2>
                   </div>
-                </Link>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+                </div>
+              </Link>
+            </div>
+          </SwiperSlide>
         );
         return carlos;
       });
@@ -50,10 +47,25 @@ const DetalleRecommend = () => {
     <>
       <div className="container-recommended">
         <div className="recommended-products">
-          <div className="r-products-header">
-            <h2 className="r-header-title">Productos relacionados</h2>
-          </div>
-          <div className="r-products-carrousel">{Productos}</div>
+          <section className="section-recommended">
+            <div className="recommended-carrousel">
+              <div className="r-products-header">
+                <h2 className="r-header-title">Productos relacionados</h2>
+              </div>
+              <div className="r-products-carrousel">
+                <Swiper
+                  className="mySwiper"
+                  modules={[Navigation, Pagination, A11y]}
+                  slidesPerView={3}
+                  spaceBetween={0}
+                  navigation={true}
+                  pagination={{ clickable: true }}
+                >
+                  {Productos}
+                </Swiper>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </>

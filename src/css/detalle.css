@@ -1,18 +1,20 @@
 .detalleproducto {
   width: 1184px;
   margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .containerdetalle {
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgb(0, 0, 0 / 25%);
   border-radius: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .productmetacontainer {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row-reverse;
   flex: 0 1 auto;
 }
@@ -306,16 +308,14 @@
 }
 
 .container-recommended {
-  width: 1184px;
+  display: flex;
+  flex-wrap: wrap;
   padding: 30px 0px 0px 0px;
-  margin: auto;
 }
 
 .recommended-products {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  flex: 0 1 auto;
+  width: 100%;
 }
 
 .r-products-header {
@@ -337,10 +337,71 @@
   align-items: center;
 }
 
-.swiper-slide {
-  width: 100% !important;
+.card-recommended-name {
+  font-size: 16px;
 }
 
+.section-recommended {
+  width: 100%;
+}
+
+.recommended-carrousel {
+  background-color: #fff;
+  width: 100%;
+  padding-right: 45px;
+  padding-left: 45px;
+}
+
+.slide-recommended {
+  padding: 20px;
+}
+
+.recommended-container {
+  border: 2px solid #000;
+}
+
+.recommended-description {
+  padding: 10px;
+  background-color: #86008f;
+  color: #fff;
+  border-top: 2px solid rgb(0 0 0 / 90%);
+}
+
+.recommend-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.recommend-price {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 8px;
+  padding-bottom: 15px;
+}
+
+.swiper-button-prev {
+  color: #86008f !important;
+}
+
+.swiper-button-next {
+  color: #86008f !important;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid #000;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0 !important;
+}
+
+:root {
+  --swiper-theme-color: #86008f !important;
+}
 /* ESTRELLA */
 
 .star-selected {
