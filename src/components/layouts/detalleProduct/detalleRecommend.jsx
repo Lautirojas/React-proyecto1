@@ -13,15 +13,21 @@ const DetalleRecommend = () => {
   const { id } = useParams();
   useEffect(() => {
     getProducts().then((producto) => {
+      //Encuentro el producto
       const productoscategoria = producto.filter(
         (productos) => productos[0] === id
       );
-
+      //Encuentro la categoria
       const cat = productoscategoria.find((cat) => cat[1].categoria);
-
+      //Encuentro todos los productos de la misma categoria
       const categorias = producto.filter(
         (productoso) => productoso[1].categoria === cat[1].categoria
       );
+      //Indice
+      const i = categorias.indexOf(cat);
+      //Splice del produdcto en el que estoy
+      categorias.splice(i, 1);
+
       const cards = categorias.map((producto) => {
         let carlos = (
           <SwiperSlide className="testimonio-recommended" key={producto[0]}>
