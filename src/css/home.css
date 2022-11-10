@@ -1,3 +1,127 @@
+.allcontainer {
+  max-width: 1302px;
+  margin: auto;
+}
+
+.titlehome {
+  padding: 25px 0px 25px 0px;
+}
+
+.titlehome h2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.categorys {
+  display: flex;
+}
+
+.categoryhome_img {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fbuzo.jpeg?alt=media&token=ca3412d0-8245-4462-9624-b66cf4baf477);
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition-duration: 1500ms;
+}
+
+.categoryhome_img1 {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fremera.png?alt=media&token=c6b8d163-b2ed-4fa3-847f-81c539391f0e);
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition-duration: 1500ms;
+}
+
+.categoryhome_img2 {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fpantalon.png?alt=media&token=1485ef03-74e8-4a1a-8304-d6f796997c1d);
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition-duration: 1500ms;
+}
+
+.categoryhome_img3 {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Faccesorio.png?alt=media&token=56a2e514-767f-48ef-92ef-f2d0b6ff4328);
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition-duration: 1500ms;
+}
+
+.categoryhome_img4 {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/react-34755-lautaro.appspot.com/o/imgenes%2Fshort1.png?alt=media&token=0fe17836-43fa-4a6e-9616-0db9ac5cf850);
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition-duration: 1500ms;
+}
+
+.categoryhome_content:hover {
+  background-color: #000;
+  opacity: 70%;
+  transform: scale(1.2);
+}
+
+.categoryhome_content {
+  color: #fff;
+  position: relative;
+  min-height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition-duration: 1500ms;
+}
+
+.categoryhome_content h2 {
+  font-size: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 50px;
+}
+
+.btn-light-categorys {
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-size: 27px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  transition: 0.5s;
+}
+
+.btn-light-categorys:hover {
+  background-color: #86008f;
+}
+
+.categoryhome_boxes {
+  width: 33.333%;
+  margin: 10px;
+}
+
+.categoryhome_boxes1 {
+  width: 50%;
+  margin: 10px;
+}
+
 /* slides */
 
 .swiper {

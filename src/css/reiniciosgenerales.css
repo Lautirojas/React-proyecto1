@@ -35,6 +35,11 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+::selection {
+  background-color: #86008f;
+  color: #ffffff;
+}
+
 .main {
   background-color: #f0ffff;
   min-height: 75vh;
@@ -91,6 +96,10 @@ html {
   text-align: left;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-light {
   color: #ffffff;
 }
@@ -121,4 +130,8 @@ html {
 
 .d-none {
   display: none;
+}
+
+.of-hidden {
+  overflow: hidden;
 }
