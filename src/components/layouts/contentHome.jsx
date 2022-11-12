@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ContentHome = () => {
   return (
@@ -15,7 +16,9 @@ const ContentHome = () => {
             <div className="categoryhome_content">
               <h2>Buzos</h2>
               <div>
-                <span className="btn-light-categorys">Ver Más</span>
+                <Link to="/Categoria/Buzos">
+                  <span className="btn-light-categorys">Ver Más</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -26,7 +29,9 @@ const ContentHome = () => {
             <div className="categoryhome_content">
               <h2>Remeras</h2>
               <div>
-                <span className="btn-light-categorys">Ver Más</span>
+                <Link to="/Categoria/Remeras">
+                  <span className="btn-light-categorys">Ver Más</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -37,7 +42,9 @@ const ContentHome = () => {
             <div className="categoryhome_content">
               <h2>Pantalones</h2>
               <div>
-                <span className="btn-light-categorys">Ver Más</span>
+                <Link to="/Categoria/Pantalones">
+                  <span className="btn-light-categorys">Ver Más</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -50,7 +57,9 @@ const ContentHome = () => {
             <div className="categoryhome_content">
               <h2>Accesorios</h2>
               <div>
-                <span className="btn-light-categorys">Ver Más</span>
+                <Link to="/Categoria/Accesorios">
+                  <span className="btn-light-categorys">Ver Más</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -61,7 +70,9 @@ const ContentHome = () => {
             <div className="categoryhome_content">
               <h2>Shorts</h2>
               <div>
-                <span className="btn-light-categorys">Ver Más</span>
+                <Link to="/Categoria/Shorts">
+                  <span className="btn-light-categorys">Ver Más</span>
+                </Link>
               </div>
             </div>
           </div>

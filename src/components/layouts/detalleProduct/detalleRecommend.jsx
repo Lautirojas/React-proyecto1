@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, A11y } from "swiper";
 import { getProducts } from "../../../utils/Firebase";
@@ -32,7 +32,7 @@ const DetalleRecommend = () => {
         let carlos = (
           <SwiperSlide className="testimonio-recommended" key={producto[0]}>
             <div className="slide-recommended">
-              <Link to={`/productos/${producto[0]}`}>
+              <a href={`/productos/${producto[0]}`}>
                 <div className="recommended-container">
                   <img src={producto[1].img} alt="" />
                   <div className="recommended-description">
@@ -40,7 +40,7 @@ const DetalleRecommend = () => {
                     <h2 className="recommend-price">${producto[1].precio}</h2>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
           </SwiperSlide>
         );

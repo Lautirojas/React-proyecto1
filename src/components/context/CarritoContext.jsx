@@ -10,6 +10,10 @@ const CarritoProvider = (props) => {
     (acc, prod) => acc + prod.cantidad * prod.precio,
     0
   );
+
+  // CANTIDAD PRODUCTO
+  const [cantidad, setcantidad] = useState(1);
+
   const agregarProducto = (prod, cant) => {
     const aux = carrito;
     let indice = aux.findIndex((producto) => producto.id === prod[0]);
@@ -57,6 +61,8 @@ const CarritoProvider = (props) => {
           vaciarCarrito,
           totalPrice,
           updateStock,
+          setcantidad,
+          cantidad,
         }}
       >
         {props.children}

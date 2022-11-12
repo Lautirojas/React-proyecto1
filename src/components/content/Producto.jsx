@@ -1,20 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from "../../utils/Firebase";
 import DetalleProducto from "./DetalleProducto";
+import { CarritoContext } from "../context/CarritoContext";
 const Producto = () => {
+  const { setcantidad, cantidad } = useContext(CarritoContext);
   const [producto, setProducto] = useState([]);
   const { id } = useParams();
   // ESTRELLAS OPINION
   const [starActive, setStarActive] = useState();
   // LABEL IMAGES
   const [label, setLabel] = useState(1);
-  // CANTIDAD PRODUCTO
-  const [cantidad, setcantidad] = useState(1);
   const cantProducto = (operacion) => {
     if (operacion === "+") {
       if (cantidad < producto[1].stock) {
         setcantidad(cantidad + 1);
+      }
+      if (cantidad > producto[1].stock) {
+        setcantidad(producto[1].stock);
       }
     } else if (cantidad > 1) {
       setcantidad(cantidad - 1);
