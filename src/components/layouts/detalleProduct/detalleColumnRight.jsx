@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import Contador from "../contador";
-
+import { CarritoContext } from "../../context/CarritoContext";
 const DetalleColumnRight = ({
   producto,
   starActive,
@@ -9,6 +9,7 @@ const DetalleColumnRight = ({
   agregarProducto,
   cantidad,
 }) => {
+  const { setcantidad } = useContext(CarritoContext);
   return (
     <>
       <div className="columnright pr-16 mt-16">
@@ -117,7 +118,10 @@ const DetalleColumnRight = ({
                       : `Stock diponible : ${producto[1].stock}`}
                   </p>
                 </div>
-                {producto[1].stock === 0 ? null : (
+                {producto[1].stock === 0 ? null : cantidad >
+                  producto[1].stock ? (
+                  setcantidad(1)
+                ) : (
                   <Contador
                     cantProducto={cantProducto}
                     cantidad={cantidad}

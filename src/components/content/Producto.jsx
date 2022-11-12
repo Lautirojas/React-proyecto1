@@ -16,11 +16,11 @@ const Producto = () => {
       if (cantidad < producto[1].stock) {
         setcantidad(cantidad + 1);
       }
-      if (cantidad > producto[1].stock) {
-        setcantidad(producto[1].stock);
-      }
     } else if (cantidad > 1) {
       setcantidad(cantidad - 1);
+    }
+    if (cantidad > producto[1].stock) {
+      setcantidad(producto[1].stock);
     }
   };
 
@@ -49,6 +49,7 @@ const Producto = () => {
           starActive={starActive}
           cantProducto={cantProducto}
           cantidad={cantidad}
+          setcantidad={setcantidad}
         />
       </>
     );
